@@ -1,5 +1,13 @@
-my_string = input()
+#my_string = input("Input a word to reverse: ")
 
-reversed_string = my_string[::-1]
+#for char in range(len(my_string) -1, -1, -1):
+#    print(my_string[char], end="")
 
-print(reversed_string)
+def reverseWord(Word):
+    words = Word.split(" ")
+    newWords = [word[::-1] for word in words]
+    newWord = " ".join(newWords)
+    return newWord
+
+Word = "Can't stop me"
+print(reverseWord(Word))
